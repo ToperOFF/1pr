@@ -11,5 +11,12 @@ namespace _1pr
         static void Main(string[] args)
         {
         }
+
+    }
+    class TovarClass
+    {
+        public string Name;
+        public int Kolvo;
+        public float Stoimost;
     }
 }

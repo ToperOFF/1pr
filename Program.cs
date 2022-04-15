@@ -20,15 +20,30 @@ namespace _1pr
             float stoimost = (float)Convert.ToDouble(Console.ReadLine());
 
             TovarClass TC = new TovarClass(name, kolvo, stoimost);
-
-            Console.WriteLine(TC.Name + " " + TC.Kolvo + " " + TC.Stoimost);
-
+            TC.NewMethod(TC);
         }
     }
     class TovarClass
     {
-        public string Name;
-        public int Kolvo;
-        public float Stoimost;
+        private string Name;
+        private int Kolvo;
+        private float Stoimost;
+        public TovarClass(string name, int kolvo, float stoimost)
+        {
+            Name = name;
+            Kolvo = kolvo;
+            Stoimost = stoimost;
+        }
+        public TovarClass()
+        {
+            Name = "";
+            Kolvo = 0;
+            Stoimost = 0;
+        }
+        public void NewMethod(TovarClass TC)
+        {
+            Console.WriteLine(TC.Name + " " + TC.Kolvo + " " + TC.Stoimost);
+            Console.ReadLine();
+        }
     }
 }
